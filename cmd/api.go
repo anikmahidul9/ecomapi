@@ -47,7 +47,7 @@ func (app *application) run(h http.Handler) error {
 		WriteTimeout: 30 * time.Second,
 		IdleTimeout:  60 * time.Second,
 	}
-	log.Println("Server has started at addr %s", app.config.addr)
+	log.Println("Server has started at addr", app.config.addr)
 	return srv.ListenAndServe()
 }
 
